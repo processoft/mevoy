@@ -1,0 +1,131 @@
+<div class="container-fluid top">
+    <div class="row">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">¡Bienvenido!
+                        <h6 class="card-subtitle mb-2">Me voy - Empresarial</h6>
+                    </h5>
+                    Esta es una demostración de su funcionamiento.
+                </div>
+            </div>
+        </div>
+        <!--div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <p>This is some text within a card body.</p>
+                   <hr>
+                    <button type="button" class="btn btn-raised btn-primary">Primary</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <canvas id="lineChart" width="400" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <canvas id="barChart" width="400" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <canvas id="pieChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div-->
+    </div>
+</div>
+<script>
+    var line = document.getElementById("lineChart").getContext('2d');
+    var lineChart = new Chart(line, {
+        type: 'line',
+        data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [{
+                label: 'Opcion 1',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(3, 169, 244, 0.1)',
+                ],
+                borderColor: [
+                    'rgba(3, 169, 244, 1)',
+                ],
+                
+                borderWidth: 1
+            }]
+        },
+
+        data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [{
+                label: 'Opcion 2',
+                data: [1, 14, 3, 43, 6, 4],
+                backgroundColor: [
+                    'rgba(3, 169, 244, 0.1)',
+                ],
+                borderColor: [
+                    'rgba(3, 169, 244, 1)',
+                ],
+                
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+    var bar = document.getElementById("barChart").getContext('2d');
+    var barChart = new Chart(bar, {
+          type: 'bar',
+    data: {
+labels: ["Africa", "Asia", "Europe", "Latin America", "North America", "Mars"],
+      datasets: [
+        {
+          label: "Population (millions)",
+            
+        backgroundColor: ["#00bcd4", "#00838f","#3f51b5","#283593","#03a9f4", "#0277bd"],
+          data: [2478,5267,734,784,433,1343]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+    });
+
+    new Chart(document.getElementById("pieChart"), {
+    type: 'pie',
+    data: {
+      labels: ["Africa", "Asia", "Europe", "Latin America", "North America", "Mars",],
+      datasets: [{
+        label: "Population (millions)",
+        backgroundColor: ["#00bcd4", "#00838f","#3f51b5","#283593","#03a9f4", "#0277bd"],
+        data: [2478,5267,734,784,433,4321]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+</script>

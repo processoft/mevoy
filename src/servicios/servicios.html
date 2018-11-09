@@ -1,0 +1,216 @@
+<div class="container-fluid top">
+    <div class="row">
+        <div class="col-12">
+            <h5 class="card-title">Servicios realizados
+        </div>       
+         
+        <div class="col-12">
+            <div class="card">
+                <div class="row m-0">
+                    <div class="col-3">
+                         <div class="form-group form-select form-outline">
+                            <label for="exampleFormControlSelect1" class="bmd-label-static">Usuario</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option selected="">Todos</option>
+                                <option>jzapata@processoft.com.co</option>
+                                <option>jbedoya@processoft.com.co</option>
+                                <option>ehenao@processoft.com.co</option>
+                               
+                               
+                            </select>
+                        </div>
+                    </div>  
+                    <div class="col-2">
+                        <div class="form-group form-select form-outline">
+                            <label for="exampleFormControlSelect1" class="bmd-label-static">Estado</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Activo</option>
+                                <option>Inactivo</option>
+                                <option>Pendiente</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group form-select form-outline">
+                            <label for="exampleFormControlSelect1" class="bmd-label-static">Centro de Costo</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Administrativo</option>
+                                <option>Comercial</option>
+                                <option selected="">Diseño</option>
+                                <option>Desarrollo</option>
+                                <option>Gerencial</option>
+                               
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-group form-date form-outline">
+                            <label for="exampleInputEmail1" class="bmd-label-static">Periodo desde</label>
+                                <input type="text" class="form-control datepicker" readonly>
+                               
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-group form-date form-outline">
+                            <label for="exampleInputEmail1" class="bmd-label-static">Periodo hasta</label>
+                                <input type="text" class="form-control datepicker" readonly>
+                               
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table table-hover ">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col" style="min-width: 150px;">Código vale</th>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col">Placa</th>
+                                        <th scope="col" style="min-width: 300px;">Dirección Origen</th>
+                                        <th scope="col" style="min-width: 150px;">Fecha Origen</th>
+                                        <th scope="col" style="min-width: 300px;">Dirección Destino</th>
+                                        <th scope="col" style="min-width: 150px;">Fecha Destino</th>
+                                        <th scope="col" style="min-width: 150px;">Centro de costo</th>
+                                        <th scope="col">Unidades</th>
+                                        <th scope="col">Pagado</th>
+                                        <th scope="col" style="min-width: 150px;">Valor total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>26272839</td>
+                                        <td>jzapata@processoft.com.co</td>
+                                        <td>EQK934</td>
+                                        <td>SAN FERNANDO Calle 5 B 5 # 36 - 94 TANGO VIVO CON VALE </td>
+                                        <td>2018/10/04 11:06</td>
+                                        <td>LA HACIENDA, Cali, VALLE DEL CAUCA</td>
+                                        <td>2018/11/06 12:18</td>
+                                        <td>Diseño</td>
+                                        <td>112</td>
+                                        <td>SI</td>
+                                        <td scope="row">$11.200</td>
+                                      
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>26272839</td>
+                                        <td>jbedoya@processoft.com.co</td>
+                                        <td>EQK934</td>
+                                        <td >SAN FERNANDO Calle 5 B 5 # 36 - 94 TANGO VIVO CON VALE </td>
+                                        <td>2018/10/04 11:06</td>
+                                        <td>LA HACIENDA, Cali, VALLE DEL CAUCA</td>
+                                        <td>2018/11/06 12:18</td>
+                                        <td>Diseño</td>
+                                        <td>112</td>
+                                        <td>SI</td>
+                                        <td scope="row">$11.200</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>26272839</td>
+                                        <td>ehenao@processoft.com.co</td>
+                                        <td>EQK934</td>
+                                        <td>SAN FERNANDO Calle 5 B 5 # 36 - 94 TANGO VIVO CON VALE </td>
+                                        <td>2018/10/04 11:06</td>
+                                        <td>LA HACIENDA, Cali, VALLE DEL CAUCA</td>
+                                        <td>2018/11/06 12:18</td>
+                                        <td>Diseño</td>
+                                        <td>112</td>
+                                        <td>SI</td>
+                                        <td scope="row">$11.200</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+        </div>
+        <!--div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div-->
+    </div>
+</div>
+
+<script>
+
+$(document).ready(function () {
+// Scripts durante la renderización
+$.router.onViewChange(function (e, viewRoute, route, params) {
+    $('body').add('.container-fluid').bootstrapMaterialDesign();   
+    console.log("router view is loaded");
+
+        $("#search").keyup(function () {
+            var searchTerm = $("#search").val();
+            var listItem = $('.table tbody').children('td');
+            var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+
+            $.extend($.expr[':'], {
+                'containsi': function (elem, i, match, array) {
+                    return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+                }
+            });
+
+            $(".table tbody tr").not(":containsi('" + searchSplit + "')").each(function (e) {
+                $(this).attr('visible', 'false');
+            });
+
+            $(".table tbody tr:containsi('" + searchSplit + "')").each(function (e) {
+                $(this).attr('visible', 'true');
+            });
+
+            var jobCount = $('.table tbody tr[visible="true"]').length;
+            $('.counter').text(jobCount + ' item');
+
+            if (jobCount == '0') {
+                $('.no-result').show();
+            } else {
+                $('.no-result').hide();
+            }
+        });
+
+    });
+});
+
+</script>
+
+
+
+
+<style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+        height: 450px;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<!--script>
+    var map;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: 3.4824596,
+                lng:-76.5220522
+            },
+            zoom: 16,
+
+        });
+        
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf8cpNoakvsq5XrPZTY0sg1s3xj34lqrQ&callback=initMap"
+    async defer></script-->

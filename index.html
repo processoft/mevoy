@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Me voy Corporativo">
+    <meta name="theme-color" content="#162057">
+
+    <link href="modules/material-bootstrap/bootstrap-material-design.min.css" rel="stylesheet"> 
+    <link  href="https://fonts.googleapis.com/css?family=Nunito:400,600,700|Material+Icons" rel="stylesheet" >
+    <link href="modules/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    
+    <link  href="styles.css" rel="stylesheet">
+    <title>Me Voy</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo.svg" alt="">
+            <span>Me Voy</span>
+            <small>ENTERPRISE</small>
+        </div>
+
+        
+
+        <div id="usuario">
+
+            
+            <div class="btn-group">
+                <button class="btn" type="button" id="menu-notificacion" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="material-icons">notifications</i>
+                </button>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-notificacion">
+
+                        <h6 class="al-dia card-subtitle text-center mb-4 mt-4"><i class="material-icons">insert_emoticon</i>Estás al día</h6>
+                </div>
+            </div>
+            <button class="btn">
+                 <i class="material-icons">search</i>
+            </button>
+            <div class="btn-group">
+                <button class="btn" type="button" id="menu-usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="name-user">JB</span>
+                </button>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-usuario" >
+                    <li class="list-group-item empresa">
+                        <i class="material-icons">domain</i> 
+                        <b>Processoft</b> <small>@jbedoya</small>
+                    </li>
+                    <a class="dropdown-item list-group-item " href="#">
+                        <i class="material-icons">person</i>
+                            Mi cuenta</a>
+                    <a class="dropdown-item list-group-item " href="#">
+                        <i class="material-icons">exit_to_app</i>
+                        Cerrar sesión</a>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+    <nav>
+        <ul class="list-group bmd-list-group-sm">
+            <li>
+                <a class="list-group-item active" href="#/dashboard">
+                    <i class="material-icons">dashboard</i>
+                    Dashboard
+                </a>
+            </li>
+             <li>
+                <a class="list-group-item" href="#/servicios">
+                    <i class="material-icons">local_taxi</i>
+                    Servicios
+                </a>
+            </li>
+            <!--li>
+                <a class="list-group-item" href="#/configuracion">
+                    <i class="material-icons">settings</i>
+                    Configuración
+                </a>
+            </li-->
+            
+            <li>
+                <a class="list-group-item" href="#/reportes">
+                    <i class="material-icons">list</i>
+                    Reportes
+                </a>
+            </li>
+            <li>
+                <a class="list-group-item" href="#/viajes">
+                    <i class="material-icons">place</i>
+                    Viajes
+                </a>
+            </li>
+            <li>
+                <a class="list-group-item" href="#/usuarios">
+                    <i class="material-icons">people</i>
+                    Usuarios
+                </a>
+            </li>
+        </ul>
+        <button id="collapse" class="btn">
+            <i class="material-icons">
+                navigate_before
+            </i>
+            <i class="material-icons">
+                navigate_next
+            </i>
+        </button>
+    </nav>
+
+    
+    <!--App Content-->
+    <app-root></app-root>
+    
+    <script src="modules/jquery/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ajaxStart(function () {
+            $('body').add('.container-fluid').bootstrapMaterialDesign();
+        });
+</script>
+    <script src="modules/pace/pace.min.js"></script>
+    <script src="modules/jq-router/jq-router.min.js"></script>
+
+    <script src="modules/material-bootstrap/popper.min.js"></script>
+    <script src="modules/material-bootstrap/snackbar.min.js"></script>
+    <script src="modules/material-bootstrap/bootstrap-material-design.min.js"></script>
+
+    <script src="modules/datetimepicker/moment-with-locales.js"></script>  
+    <script src="modules/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    
+    <script src="modules/routes/routes.js"></script>
+    <script src="master.js"></script>
+    
+  
+  
+</body>
+</html> 

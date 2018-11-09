@@ -1,0 +1,562 @@
+/***** ROOT
+************************************/
+
+:root {
+
+    /* Easing */
+
+    --ease-td: all 350ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    --ease-in: all 250ms cubic-bezier(0.0, 0.0, 0.2, 1);
+    --ease-out: all 200ms cubic-bezier(0.4, 0.0, 1, 1);
+
+    /* Colors */
+
+    --primary: #000;
+    --secondary: #0084ce;
+    --light: #808080;
+
+}
+
+
+
+
+/***** BASICS
+************************************/
+
+body {
+    background-color:#fff;
+    font-family: 'Nunito', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    text-rendering: optimizeLegibility;
+    color: #333;
+}
+
+/* This is a compiled file, you should be editing the file in the templates directory */
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+.pace .pace-progress {
+    background: var(--secondary);
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+    box-shadow: 0 0 10px var(--secondary),
+    0 0 5px var(--secondary);
+}
+
+a.dropdown-item.list-group-item {
+    font-size: 14px;
+    padding: 5px 15px;
+}
+
+.dropdown-menu {
+    box-shadow: 0 5px 50px rgba(37, 43, 51, .3);
+    border-radius: 6px !important;
+    overflow: hidden;
+    min-width: 200px;
+} 
+
+.list-group-item.empresa {
+    background: #eee;
+    margin-top: -8px;
+}
+
+.list-group-item.empresa i {
+    font-size: 18px;
+    margin-right: 5px;
+    color: var(--primary);
+}
+
+.list-group-item.empresa b {
+    color: var(--primary);
+    padding-right: 10px;
+}
+
+/***** Layout
+************************************/
+
+
+app-root {
+    background:#F8F8F8;
+    width: calc(100% - 180px);
+    height: calc(100vh - 50px);
+    position: fixed;
+    right: 0;
+    top: 50px;
+    overflow-y: auto;
+    transition: var(--ease-out);
+}
+
+app-root.active {
+    width: calc(100% - 50px);
+    transition: var(--ease-in);
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 50px;
+    background: #000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    z-index: 100;
+}
+
+nav {
+    height: calc(100vh - 50px);
+    width: 180px;
+    left: 0;
+    position: fixed;
+    top: 50px;
+    background: #f8f8f8;
+    padding-top: 15px;
+    transition: var(--ease-out);
+    overflow: hidden;
+}
+
+nav.active {
+    width: 55px;
+    transition: var(--ease-in);
+
+}
+nav> ul {
+    width: 180px;
+}
+/***** Fixes
+************************************/
+.list-group-item :first-child {
+    margin-right: 1rem;
+}
+
+.card-text span {
+    color: var(--light);
+}
+
+.card{
+    border-radius: 5px;
+    margin-bottom: 20px;
+box-shadow: 0 5px 100px rgba(37, 43, 51, .1);
+
+
+}
+.container-fluid.top{
+    margin-top: 15px;
+}
+
+a.list-group-item {
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+}
+.snackbar-content {
+    text-align: center;
+}
+
+#snackbar-container {
+    right: 0;
+    width: 100%;
+    left: 0;
+}
+
+.bootstrap-datetimepicker-widget table td.day {
+    height: 30px;
+    line-height: 2.9;
+    width: 30px;
+    font-size: 14px;
+    padding: 0;
+}
+
+
+/***** Header
+************************************/
+#usuario {
+    position: fixed;
+    right: 0;
+    height: 50px;
+    padding-right: 15px;
+}
+
+#usuario  button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    margin-left: 5px;
+    border: 0px;
+    padding: 0;
+    color: #fff;
+}
+#usuario button > .material-icons {
+    font-size: 32px;
+}
+#usuario button>.name-user {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #fff;
+    display: block;
+    line-height: 2;
+    font-size: 16px;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.1);
+    transition: var(--ease-out);
+    border-color:#fff;
+}
+
+#usuario .btn-group {
+    margin: 0;
+    font-size: inherit;
+}
+
+#menu-usuario[aria-expanded="true"] .name-user {
+    background: var(--secondary);
+    transition: var(--ease-in);
+    border-color: var(--secondary);
+}
+
+
+#menu-notificacion[aria-expanded="true"] > .material-icons {
+    color: var(--secondary);
+    transition: var(--ease-in);
+    border-color: var(--secondary);
+}
+
+/***** Nav
+************************************/
+
+nav .list-group-item {
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    display: flex;
+    width: 100%;
+}
+
+#collapse i:nth-child(2),
+#collapse.active i:nth-child(1) {
+    display: none;
+}
+#collapse.active i:nth-child(2),
+#collapse i:nth-child(1){
+    display: block;
+}
+
+
+
+nav .list-group-item.active,
+nav .list-group-item:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    transition:var(--ease-out);
+}
+
+nav .list-group-item:hover {
+    transition:var(--ease-in);
+   opacity:0.6;
+}
+
+.logo img{
+    height: 30px;
+
+}
+
+
+.logo>small {
+    width: 100%;
+    color: #fff;
+    letter-spacing: 2px;
+    left: 55px;
+    position: absolute;
+    bottom: 7px;
+    font-size: 9px;
+    line-height: 1;
+}
+
+.logo {
+    padding: 10px 15px;
+    width: 180px;
+    position: fixed;
+}
+
+.logo span {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 5px;
+    top: 10px;
+    position: absolute;
+    line-height: 1;
+    left: 50px;
+}
+
+/***** Forms
+************************************/
+
+.form-outline input[type="text"],
+.form-outline input[type="password"],
+.form-outline input[type="number"],
+.form-outline input[type="email"],
+.form-outline select {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 6px;
+    border-color: var(--light);
+    height: 44px !important;
+}
+
+.form-outline.is-focused [class*=" bmd-label"],
+.form-outline.is-focused [class^=bmd-label] {
+    color: var(--secondary);
+}
+
+.form-outline.is-focused input[type="text"],
+.form-outline.is-focused input[type="password"],
+.form-outline.is-focused input[type="number"],
+.form-outline.is-focused input[type="email"],
+.form-outline.is-focused select {
+    border-color: var(--secondary);
+}
+
+.form-group.form-select:before {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    font-size: 24px;
+    color: #808080;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    content: 'arrow_drop_down';
+    pointer-events: none;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    transform: scale(0.86);
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+    background-color: var(--secondary);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.bootstrap-datetimepicker-widget table td.day.today {
+    font-weight: 700;
+}
+input.form-control.datepicker {
+    background: #ffff;
+}
+.form-outline label.bmd-label-static {
+    background: #fff;
+    transform: translate(8px, 0px);
+    padding: 1px 5px;
+    font-weight: 600;
+    color: var(--light);
+}
+
+.custom-file-control,
+.form-control,
+.is-focused .custom-file-control,
+.is-focused .form-control,
+.form-control:read-only
+ {
+    background-image: none;
+}
+
+.bmd-form-group {
+    position: relative;
+    padding-top: 1.3rem;
+}
+.al-dia {
+    color: #808080;
+}
+
+.al-dia i{
+    display: block;
+    font-size: 36px;
+    color: #808080;
+    margin-bottom: 10px;
+}
+
+
+/***** Button
+************************************/
+
+button.btn.btn-raised>i {
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+button.btn.btn-grid {
+    font-size: 14px;
+    padding: 2px 5px;
+}
+
+button.btn.btn-grid i {
+    font-size: 18px;
+}
+
+.bmd-btn-fab.btn-primary.custom-file-control:before,
+.btn-group-raised .btn-primary.custom-file-control:before,
+.btn-group-raised .btn.btn-primary,
+.btn-raised.btn-primary.custom-file-control:before,
+.btn.bmd-btn-fab.btn-primary,
+.btn.btn-raised.btn-primary {
+    color: #fff;
+    background-color: #03A9F4;
+    border-color: #03A9F4;
+    font-weight: 700;
+    border-radius: 18px;
+    box-shadow: none;
+    letter-spacing: 0.5px;
+}
+
+.bmd-btn-fab.btn-primary.active.custom-file-control:before,
+.bmd-btn-fab.btn-primary.custom-file-control:active:before,
+.bmd-btn-fab.btn-primary.custom-file-control:focus:before,
+.bmd-btn-fab.btn-primary.custom-file-control:hover:before,
+.bmd-btn-fab.btn-primary.focus.custom-file-control:before,
+.btn-group-raised .btn-primary.active.custom-file-control:before,
+.btn-group-raised .btn-primary.custom-file-control:active:before,
+.btn-group-raised .btn-primary.custom-file-control:focus:before,
+.btn-group-raised .btn-primary.custom-file-control:hover:before,
+.btn-group-raised .btn-primary.focus.custom-file-control:before,
+.btn-group-raised .btn.btn-primary.active,
+.btn-group-raised .btn.btn-primary.focus,
+.btn-group-raised .btn.btn-primary:active,
+.btn-group-raised .btn.btn-primary:focus,
+.btn-group-raised .btn.btn-primary:hover,
+.btn-raised.btn-primary.active.custom-file-control:before,
+.btn-raised.btn-primary.custom-file-control:active:before,
+.btn-raised.btn-primary.custom-file-control:focus:before,
+.btn-raised.btn-primary.custom-file-control:hover:before,
+.btn-raised.btn-primary.focus.custom-file-control:before,
+.btn.bmd-btn-fab.btn-primary.active,
+.btn.bmd-btn-fab.btn-primary.focus,
+.btn.bmd-btn-fab.btn-primary:active,
+.btn.bmd-btn-fab.btn-primary:focus,
+.btn.bmd-btn-fab.btn-primary:hover,
+.btn.btn-raised.btn-primary.active,
+.btn.btn-raised.btn-primary.focus,
+.btn.btn-raised.btn-primary:active,
+.btn.btn-raised.btn-primary:focus,
+.btn.btn-raised.btn-primary:hover,
+.open>.bmd-btn-fab.btn-primary.dropdown-toggle.custom-file-control:before,
+.open>.btn-group-raised .btn-primary.dropdown-toggle.custom-file-control:before,
+.open>.btn-group-raised .btn.btn-primary.dropdown-toggle,
+.open>.btn-raised.btn-primary.dropdown-toggle.custom-file-control:before,
+.open>.btn.bmd-btn-fab.btn-primary.dropdown-toggle,
+.open>.btn.btn-raised.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #0788C3;
+    border-color: #0788C3;
+}
+
+
+/***** Viaje
+************************************/
+
+.vale{
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+.img-map{
+    object-fit: cover;
+    width: 100%;
+}
+
+.recorrido{
+    padding:15px 15px 20px 15px;
+}
+.recorrido>h6 {
+    padding: 5px;
+}
+
+
+/*
+.card-text span:after {
+    width: 25px;
+    height: 0px;
+    border-bottom: 1px dashed var(--light);
+    position: absolute;
+    content: '';
+    transform: translate(8px, 10px);
+}*/
+
+.card-text span{
+    padding-right: 40px;
+}
+
+.img-conductor{
+    max-width: 120px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.detalles{
+    padding:15px 0;
+}
+
+.detalles p{
+    margin: 0;
+}
+
+.detalles span{
+    color: var(--light);
+}
+
+.factura {
+    margin: 0;
+    padding: 15px 0;
+}
+
+.factura > div{
+    font-size: 16px;
+}
+/***** table
+************************************/
+
+.table tr[visible='false'],
+.no-result {
+    display: none;
+}
+
+.table tr[visible='true'] {
+    display: table-row;
+}
+
+.counter {
+    padding: 8px;
+    color: #ccc;
+}
+
+
+

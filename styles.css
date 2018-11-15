@@ -181,8 +181,26 @@ a.list-group-item {
     font-size: 14px;
     padding: 0;
 }
+.form-date .material-icons {
+    color: #707070;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -3px;
+    pointer-events: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.nav-tabs .nav-link.active {
+    color: rgb(255, 255, 255);
+    background: #000;
+    border-radius: 30px;
+}
 
-
+link, .nav-tabs .nav-link {
+    padding: 0.6em .8575em;
+    cursor: pointer;
+}
 /***** Header
 ************************************/
 #usuario {
@@ -315,14 +333,15 @@ nav .list-group-item:hover {
 .form-outline input[type="email"],
 .form-outline select {
     border: 1px solid;
-    padding: 10px;
+    padding: 12px 10px 8px 10px;
     border-radius: 6px;
     border-color: var(--light);
     height: 44px !important;
 }
 
 .form-outline.is-focused [class*=" bmd-label"],
-.form-outline.is-focused [class^=bmd-label] {
+.form-outline.is-focused [class^=bmd-label],
+.form-outline.is-focused.form-date .material-icons {
     color: var(--secondary);
 }
 

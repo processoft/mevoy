@@ -5,142 +5,227 @@
         </div>
 
         <div class="col-12">
+            <ul class="nav nav-tabs mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="tab-empresa" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Costos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="tab-sucursal" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Cartera</a>
+                  </li>
+
+                </ul>
+        </div>
+
+        <div class="col-12">
             <div class="card">
 
+                
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    
                 <div class="row m-0">
-                    <div class="col-3">
-                        <div class="form-group form-outline">
-                            <label for="exampleInputEmail1" class="bmd-label-static">Usuario</label>
-                            <input id="search" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa el usuario">
-                        </div>  
+                    <div class="col-6">
+                         <div class="form-group form-select form-outline">
+                            <label for="exampleFormControlSelect1" class="bmd-label-static">Tipo de consumo</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option selected="">Consumo por empresa</option>
+                                <option>Consumo por sucursal</option>
+                                <option>Consumo por centro de costo</option>
+                                <option>Consumo por mes</option>
+                               
+                               
+                            </select>
+                        </div>
                     </div>  
-                    <div class="col-2">
-                        <div class="form-group form-select form-outline">
-                            <label for="exampleFormControlSelect1" class="bmd-label-static">Estado</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Activo</option>
-                                <option>Inactivo</option>
-                                <option>Pendiente</option>
-                            </select>
-                        </div>
-                    </div>
+                  
                     <div class="col-3">
-                        <div class="form-group form-select form-outline">
-                            <label for="exampleFormControlSelect1" class="bmd-label-static">Centro de Costo</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Opcion 1</option>
-                                <option>Opcion 2</option>
-                                <option>Opcion 3</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-2">
                         <div class="form-group form-date form-outline">
                             <label for="exampleInputEmail1" class="bmd-label-static">Periodo desde</label>
-                                <input type="text" class="form-control datepicker" readonly>
+                                <input type="text" class="form-control datepicker" readonly placeholder="dd/mm/aaaa">
+                                <i class="material-icons">calendar_today</i>
                                
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-3">
                         <div class="form-group form-date form-outline">
                             <label for="exampleInputEmail1" class="bmd-label-static">Periodo hasta</label>
-                                <input type="text" class="form-control datepicker" readonly>
+                                <input type="text" class="form-control datepicker" readonly placeholder="dd/mm/aaaa">
+                                <i class="material-icons">calendar_today</i>
                                
                         </div>
                     </div>
-<div class="col-12">
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col text-center">Nombre</th>
-                    <th scope="col text-center">Cargo</th>
-                    <th scope="col text-center">Correo electrónico</th>
-                    <th scope="col text-center">Consumo total</th>
-                    <th scope="col text-center">Saldo</th>
-                    <th scope="col text-center">Estado</th>
-                    <th scope="col text-center">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Juan Bedoya</td>
-                    <td>Diseñador</td>
-                    <td>jbedoya@processoft.com.co</td>
-                    <td>150.000 COP</td>
-                    <td>- - -</td>
-                    <td><span class="badge badge-pill badge-success">Activo</span></td>
-                    <td>
-                        <button class="btn btn-grid btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Editar">
-                            <i class="material-icons">edit</i>
-                        </button>
-                        <button class="btn btn-grid btn-danger" data-toggle="tooltip" data-placement="bottom" title="Eliminar">
-                            <i class="material-icons">delete</i>
-                        </button>
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table table-hover ">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col" style="min-width: 150px;">Código vale</th>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col">Placa</th>
+                                        <th scope="col" style="min-width: 300px;">Dirección Origen</th>
+                                        <th scope="col" style="min-width: 150px;">Fecha Origen</th>
+                                        <th scope="col" style="min-width: 300px;">Dirección Destino</th>
+                                        <th scope="col" style="min-width: 150px;">Fecha Destino</th>
+                                        <th scope="col" style="min-width: 150px;">Centro de costo</th>
+                                        <th scope="col">Unidades</th>
+                                        <th scope="col">Pagado</th>
+                                        <th scope="col" style="min-width: 150px;">Valor total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>26272839</td>
+                                        <td>jzapata@processoft.com.co</td>
+                                        <td>EQK934</td>
+                                        <td>SAN FERNANDO Calle 5 B 5 # 36 - 94 TANGO VIVO CON VALE </td>
+                                        <td>2018/10/04 11:06</td>
+                                        <td>LA HACIENDA, Cali, VALLE DEL CAUCA</td>
+                                        <td>2018/11/06 12:18</td>
+                                        <td>Diseño</td>
+                                        <td>112</td>
+                                        <td>SI</td>
+                                        <td scope="row">$11.200</td>
+                                      
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>26272839</td>
+                                        <td>jbedoya@processoft.com.co</td>
+                                        <td>EQK934</td>
+                                        <td >SAN FERNANDO Calle 5 B 5 # 36 - 94 TANGO VIVO CON VALE </td>
+                                        <td>2018/10/04 11:06</td>
+                                        <td>LA HACIENDA, Cali, VALLE DEL CAUCA</td>
+                                        <td>2018/11/06 12:18</td>
+                                        <td>Diseño</td>
+                                        <td>112</td>
+                                        <td>SI</td>
+                                        <td scope="row">$11.200</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>26272839</td>
+                                        <td>ehenao@processoft.com.co</td>
+                                        <td>EQK934</td>
+                                        <td>SAN FERNANDO Calle 5 B 5 # 36 - 94 TANGO VIVO CON VALE </td>
+                                        <td>2018/10/04 11:06</td>
+                                        <td>LA HACIENDA, Cali, VALLE DEL CAUCA</td>
+                                        <td>2018/11/06 12:18</td>
+                                        <td>Diseño</td>
+                                        <td>112</td>
+                                        <td>SI</td>
+                                        <td scope="row">$11.200</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>  
+                  </div>
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Javier Zapata</td>
-                    <td>Desarrollador</td>
-                    <td>jzapata@processoft.com.co</td>
-                    <td>150.000 COP</td>
-                    <td>- - -</td>
-                    <td><span class="badge badge-pill badge-danger">Inactivo</span></td>
-                    <td>
-                        <button class="btn btn-grid btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Editar">
-                            <i class="material-icons">edit</i>
-                        </button>
-                        <button class="btn btn-grid btn-danger" data-toggle="tooltip" data-placement="bottom" title="Eliminar">
-                            <i class="material-icons">delete</i>
-                        </button>
+                   <div class="row m-0">
+                   <div class="col-6">
+                         <div class="form-group form-select form-outline">
+                            <label for="exampleFormControlSelect1" class="bmd-label-static">Tipo de cartera</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option selected="">Cartera por empresa</option>
+                                <option>Cartera por sucursal</option>
 
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Edward Henao</td>
-                    <td>Desarrollador</td>
-                    <td>ehenao@processoft.com.co</td>
-                    <td>275.350 COP</td>
-                    <td>- - -</td>
-                    <td><span class="badge badge-pill badge-success">Activo</span></td>
-                    <td>
-                        <button class="btn btn-grid btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Editar">
-                            <i class="material-icons">edit</i>
-                        </button>
-                        <button class="btn btn-grid btn-danger" data-toggle="tooltip" data-placement="bottom" title="Eliminar">
-                            <i class="material-icons">delete</i>
-                        </button>
+                               
+                               
+                            </select>
+                        </div>
+                    </div>  
+                  
+                    <div class="col-3">
+                        <div class="form-group form-date form-outline">
+                            <label for="exampleInputEmail1" class="bmd-label-static">Periodo desde</label>
+                                <input type="text" class="form-control datepicker" readonly placeholder="dd/mm/aaaa">
+                                <i class="material-icons">calendar_today</i>
+                               
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group form-date form-outline">
+                            <label for="exampleInputEmail1" class="bmd-label-static">Periodo hasta</label>
+                                <input type="text" class="form-control datepicker" readonly placeholder="dd/mm/aaaa">
+                                <i class="material-icons">calendar_today</i>
+                               
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table table-hover ">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col" style="min-width: 150px;">Código vale</th>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col">Placa</th>
+                                        <th scope="col" style="min-width: 300px;">Dirección Origen</th>
+                                        <th scope="col" style="min-width: 150px;">Fecha Origen</th>
+                                        <th scope="col" style="min-width: 300px;">Dirección Destino</th>
+                                        <th scope="col" style="min-width: 150px;">Fecha Destino</th>
+                                        <th scope="col" style="min-width: 150px;">Centro de costo</th>
+                                        <th scope="col">Unidades</th>
+                                        <th scope="col">Pagado</th>
+                                        <th scope="col" style="min-width: 150px;">Valor total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>26272839</td>
+                                        <td>jzapata@processoft.com.co</td>
+                                        <td>EQK934</td>
+                                        <td>SAN FERNANDO Calle 5 B 5 # 36 - 94 TANGO VIVO CON VALE </td>
+                                        <td>2018/10/04 11:06</td>
+                                        <td>LA HACIENDA, Cali, VALLE DEL CAUCA</td>
+                                        <td>2018/11/06 12:18</td>
+                                        <td>Diseño</td>
+                                        <td>112</td>
+                                        <td>SI</td>
+                                        <td scope="row">$11.200</td>
+                                      
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>26272839</td>
+                                        <td>jbedoya@processoft.com.co</td>
+                                        <td>EQK934</td>
+                                        <td >SAN FERNANDO Calle 5 B 5 # 36 - 94 TANGO VIVO CON VALE </td>
+                                        <td>2018/10/04 11:06</td>
+                                        <td>LA HACIENDA, Cali, VALLE DEL CAUCA</td>
+                                        <td>2018/11/06 12:18</td>
+                                        <td>Diseño</td>
+                                        <td>112</td>
+                                        <td>SI</td>
+                                        <td scope="row">$11.200</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>26272839</td>
+                                        <td>ehenao@processoft.com.co</td>
+                                        <td>EQK934</td>
+                                        <td>SAN FERNANDO Calle 5 B 5 # 36 - 94 TANGO VIVO CON VALE </td>
+                                        <td>2018/10/04 11:06</td>
+                                        <td>LA HACIENDA, Cali, VALLE DEL CAUCA</td>
+                                        <td>2018/11/06 12:18</td>
+                                        <td>Diseño</td>
+                                        <td>112</td>
+                                        <td>SI</td>
+                                        <td scope="row">$11.200</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>  
 
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Eduardo Sardi</td>
-                    <td>Gerente</td>
-                    <td>esardi@processoft.com.co</td>
-                    <td>134.450 COP</td>
-                    <td>- - -</td>
-                    <td><span class="badge badge-pill badge-info">Pendiente</span></td>
-                    <td>
-                        <button class="btn btn-grid btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Editar">
-                            <i class="material-icons">edit</i>
-                        </button>
-                        <button class="btn btn-grid btn-danger" data-toggle="tooltip" data-placement="bottom" title="Eliminar">
-                            <i class="material-icons">delete</i>
-                        </button>
-
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
                 </div>
+
             </div>
         </div>
     </div>

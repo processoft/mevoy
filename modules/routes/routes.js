@@ -43,6 +43,11 @@ routes['usuarios'] = {
     url: '#/usuarios',
     templateUrl: 'src/usuarios/usuarios.html'
 };
+
+routes['eficiencia'] = {
+    url: '#/eficiencia',
+    templateUrl: 'src/eficiencia/eficiencia.html'
+};
  $.router
      .setData(routes)
      .setDefault(defaultRoute);

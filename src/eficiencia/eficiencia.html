@@ -1,0 +1,224 @@
+<div class="container-fluid top">
+    <div class="row">
+        <div class="col-12">
+            <h5 class="card-title">Eficiencia
+        </div>       
+         
+        <div class="col-12">
+            <div class="card">
+                
+                <div class="row m-0">
+                   
+                   <div class="col-6">
+                         <div class="form-group form-select form-outline">
+                            <label for="exampleFormControlSelect1" class="bmd-label-static">Tipo de eficiencia</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option selected="">Rutas frecuentes</option>
+                                <option>Horarios frecuentes</option>
+                                <option>Optimizaciones</option>
+                           
+                               
+                               
+                            </select>
+                        </div>
+                    </div>  
+                  
+                    <div class="col-3">
+                        <div class="form-group form-date form-outline">
+                            <label for="exampleInputEmail1" class="bmd-label-static">Periodo desde</label>
+                                <input type="text" class="form-control datepicker" readonly placeholder="dd/mm/aaaa">
+                                <i class="material-icons">calendar_today</i>
+                               
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group form-date form-outline">
+                            <label for="exampleInputEmail1" class="bmd-label-static">Periodo hasta</label>
+                                <input type="text" class="form-control datepicker" readonly placeholder="dd/mm/aaaa">
+                                <i class="material-icons">calendar_today</i>
+                               
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col text-center">Nombre</th>
+                                         <th scope="col text-center">Cargo</th>
+                                        <th scope="col text-center">Correo electrónico</th>
+                                        <th scope="col text-center">Consumo total</th>
+                                        <th scope="col text-center">Saldo</th>
+                                        <th scope="col text-center">Estado</th>
+                                        <th scope="col text-center">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Juan Bedoya</td>
+                                        <td>Diseñador</td>
+                                        <td>jbedoya@processoft.com.co</td>
+                                        <td>150.000 COP</td>
+                                        <td>- - -</td>
+                                        <td><span class="badge badge-pill badge-success">Activo</span></td>
+                                        <td>
+                                            <button class="btn btn-grid btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Editar">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button class="btn btn-grid btn-danger" data-toggle="tooltip" data-placement="bottom" title="Eliminar">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Javier Zapata</td>
+                                        <td>Desarrollador</td>
+                                        <td>jzapata@processoft.com.co</td>
+                                        <td>150.000 COP</td>
+                                        <td>- - -</td>
+                                        <td><span class="badge badge-pill badge-danger">Inactivo</span></td>
+                                        <td>
+                                            <button class="btn btn-grid btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Editar">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button class="btn btn-grid btn-danger" data-toggle="tooltip" data-placement="bottom" title="Eliminar">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Edward Henao</td>
+                                        <td>Desarrollador</td>
+                                        <td>ehenao@processoft.com.co</td>
+                                        <td>275.350 COP</td>
+                                        <td>- - -</td>
+                                        <td><span class="badge badge-pill badge-success">Activo</span></td>
+                                        <td>
+                                            <button class="btn btn-grid btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Editar">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button class="btn btn-grid btn-danger" data-toggle="tooltip" data-placement="bottom" title="Eliminar">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Eduardo Sardi</td>
+                                        <td>Gerente</td>
+                                        <td>esardi@processoft.com.co</td>
+                                        <td>134.450 COP</td>
+                                        <td>- - -</td>
+                                        <td><span class="badge badge-pill badge-info">Pendiente</span></td>
+                                        <td>
+                                            <button class="btn btn-grid btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Editar">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button class="btn btn-grid btn-danger" data-toggle="tooltip" data-placement="bottom" title="Eliminar">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+        </div>
+        <!--div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div-->
+    </div>
+</div>
+
+<script>
+
+$(document).ready(function () {
+// Scripts durante la renderización
+$.router.onViewChange(function (e, viewRoute, route, params) {
+    $('body').add('.container-fluid').bootstrapMaterialDesign();   
+    console.log("router view is loaded");
+
+        $("#search").keyup(function () {
+            var searchTerm = $("#search").val();
+            var listItem = $('.table tbody').children('td');
+            var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+
+            $.extend($.expr[':'], {
+                'containsi': function (elem, i, match, array) {
+                    return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+                }
+            });
+
+            $(".table tbody tr").not(":containsi('" + searchSplit + "')").each(function (e) {
+                $(this).attr('visible', 'false');
+            });
+
+            $(".table tbody tr:containsi('" + searchSplit + "')").each(function (e) {
+                $(this).attr('visible', 'true');
+            });
+
+            var jobCount = $('.table tbody tr[visible="true"]').length;
+            $('.counter').text(jobCount + ' item');
+
+            if (jobCount == '0') {
+                $('.no-result').show();
+            } else {
+                $('.no-result').hide();
+            }
+        });
+
+    });
+});
+
+</script>
+
+
+
+
+<style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+        height: 450px;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<!--script>
+    var map;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: 3.4824596,
+                lng:-76.5220522
+            },
+            zoom: 16,
+
+        });
+        
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf8cpNoakvsq5XrPZTY0sg1s3xj34lqrQ&callback=initMap"
+    async defer></script-->
